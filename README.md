@@ -20,9 +20,9 @@ services:
       options:
         max-size: 1m
     environment:
-      - PUID=${CLOUDREVE_PUID}
-      - PGID=${CLOUDREVE_PGID}
-      - RPC_SECRET=${ARIA2_RPC_SECRET}
+      - PUID=0
+      - PGID=0
+      - RPC_SECRET=SECRET
     volumes:
       - aria2_conf:/aria2_conf
       - temp:/aria2_downloads

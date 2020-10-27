@@ -6,6 +6,7 @@ services:
       - data:/data
       - config:/etc/cloudreve
       - temp:/aria2_downloads
+      - uploads:/cloudreve/uploads
     ports:
       - "5212:5212"
     restart: unless-stopped
@@ -15,9 +16,9 @@ services:
       options:
         max-size: 1m
     environment:
-      - PUID=${CLOUDREVE_PUID}
-      - PGID=${CLOUDREVE_PGID}
-      - RPC_SECRET=${ARIA2_RPC_SECRET}
+      - PUID=0
+      - PGID=0
+      - RPC_SECRET=SECRET
     volumes:
       - aria2_conf:/aria2_conf
       - temp:/aria2_downloads
@@ -27,3 +28,4 @@ volumes:
   config:
   temp:
   aria2_conf:
+  uploads:
