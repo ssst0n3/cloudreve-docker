@@ -1,6 +1,7 @@
 # a simple cloudreve container with offline download
 
 ## how to use
+docker-compose.yml
 ```
 version: '3'
 services:
