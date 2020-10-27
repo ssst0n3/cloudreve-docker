@@ -1,8 +1,11 @@
+# a simple cloudreve container with offline download
+
+## how to use
+```
 version: '3'
 services:
   cloudreve:
-    build: .
-    image: cloudreve:0.1.0
+    image: cloudreve:latest
     volumes:
       - data:/data
       - config:/etc/cloudreve
@@ -28,3 +31,6 @@ volumes:
   config:
   temp:
   aria2_conf:
+```
+
+## ATTENTION: edit the variable ARIA2_RPC_SECRET in file .env
