@@ -5,7 +5,7 @@
 version: '3'
 services:
   cloudreve:
-    image: cloudreve:latest
+    image: ssst0n3/cloudreve:0.1.0:latest
     volumes:
       - data:/data
       - config:/etc/cloudreve
