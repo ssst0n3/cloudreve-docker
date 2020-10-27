@@ -6,7 +6,7 @@ docker-compose.yml
 version: '3'
 services:
   cloudreve:
-    image: ssst0n3/cloudreve:0.1.0:latest
+    image: ssst0n3/cloudreve-docker:latest
     volumes:
       - data:/data
       - config:/etc/cloudreve
